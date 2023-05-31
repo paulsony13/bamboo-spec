@@ -1,0 +1,10 @@
+---
+version: 2
+deployment:
+  name: Bamboo Specs Demo
+  source-plan: GIT-PTS # match project key and plan key de
+release-naming:
+  next-version-name: S(bamboo. c1_variables.VERSION)
+environments:
+- integration
+integration: !include 'ntegration.ymt'
