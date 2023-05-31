@@ -7,8 +7,8 @@ deployment:
 
 release-naming:
   next-version-name: release-${bamboo.release-number}
-  auto-increment-variables:
-    - release-number
+  applies-to-branches: true
+  auto-increment: true
 
 environments:
   - Test  
