@@ -1,8 +1,8 @@
 ---
 version: 2
 plan:
-  project-key: MARS
-  key: ROCKET
+  project-key: BAM 
+  key: BAM
   name: Build the rocket
 stages:
   - Build hull:
