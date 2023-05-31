@@ -3,12 +3,13 @@ version: 2
 
 deployment:
   name: Deploy Test
-  source-plan: BAM-BAM
+  source-plan: GIT-PTS
 
 release-naming:
-  next-version-name: release-${bamboo.release-number}
-  applies-to-branches: true
+  next-version-name: release-1
+  applies-to-branches: false
   auto-increment: true
+  auto-increment-variables: []
 
 environments:
   - Test  
