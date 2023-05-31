@@ -1,29 +1,12 @@
 ---
 version: 2
-deployment:
-  name: Bamboo Specs Demos
-  source-plan: GIT-PTS
-release-naming:
-  next-version-name: ${bamboo.version_major_number}.${bamboo.buildNumber}
+# ...
 environments:
-  - environment: Production
-    description: Deployment plan for the Diary Notes Python Shared Service to production
-    tasks:
-      - type: SCRIPT
-        description: Cutover Blue to Green - Training
-        body: |
-          echo "Hello from Spec !"
+  - Test
+  - QA
+  - Prod
 
----
-
-version: 2
-deployment:
-  name: bamboo-spec-demo
-deployment-permissions:
-- users:
-  - bamboo
-  permissions:
-  - view
-  - edit
-  - view_configuration
+Test:
+  tasks:
+    - clean
 
