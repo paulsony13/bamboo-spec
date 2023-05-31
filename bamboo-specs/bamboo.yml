@@ -1,12 +1,18 @@
 ---
 version: 2
-# ...
+
+deployment:
+  name: Deploy Test
+  source-plan: BAM-BAM
+
+release-naming:
+  next-version-name: release-${bamboo.release-number}
+  auto-increment-variables:
+    - release-number
+
 environments:
-  - Test
-  - QA
-  - Prod
+  - Test  
 
 Test:
   tasks:
     - clean
-
